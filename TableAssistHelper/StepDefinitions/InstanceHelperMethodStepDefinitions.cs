@@ -9,23 +9,22 @@ namespace TableAssistHelper.StepDefinitions
         private class ProductQuantities
         {
             public string ProductID { get; set; }
-            [TableAliases("Reserved Qty", "Internal Qty")]
             public int StockQty { get; set; }
             public int Basket { get; set; }
         }
 
-        private IEnumerable<ProductQuantities> productQuantities = new List<ProductQuantities>();
+        private IEnumerable<ProductQuantities> _productQuantities = new List<ProductQuantities>();
 
         [Given(@"the example below with instance helper")]
         public void GivenTheExampleBelowWithInstanceHelper(Table table)
         {
-            productQuantities = table.CreateSet<ProductQuantities>();
+            _productQuantities = table.CreateSet<ProductQuantities>();
         }
 
         [Then(@"valid this scenario with table assist helper")]
         public void ThenValidThisScenarioWithTableAssistHelper()
         {
-            Assert.Equal(4, productQuantities.Count());
+            Assert.Equal(4, _productQuantities.Count());
         }
     }
 }

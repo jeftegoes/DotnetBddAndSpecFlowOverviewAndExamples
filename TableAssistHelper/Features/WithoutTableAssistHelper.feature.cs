@@ -108,28 +108,28 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "Product",
                             "Stock",
                             "Basket"});
-                table2.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "1",
                             "2",
                             "0"});
-                table2.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "2",
                             "0",
                             "0"});
-                table2.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "3",
                             "2",
                             "1"});
-                table2.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "4",
                             "5",
                             "1"});
 #line 4
- testRunner.Given("the example below", ((string)(null)), table2, "Given ");
+ testRunner.Given("the example below", ((string)(null)), table12, "Given ");
 #line hidden
 #line 10
  testRunner.Then("valid this scenario without table assist helper", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");

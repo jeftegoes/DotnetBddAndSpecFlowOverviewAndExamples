@@ -19,7 +19,7 @@ namespace TableAssistHelper.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class InstanceHelperMethodFeature : object, Xunit.IClassFixture<InstanceHelperMethodFeature.FixtureData>, System.IDisposable
+    public partial class CreateInstanceFeature : object, Xunit.IClassFixture<CreateInstanceFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace TableAssistHelper.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "InstanceHelperMethod.feature"
+#line 1 "CreateInstanceHelperMethod.feature"
 #line hidden
         
-        public InstanceHelperMethodFeature(InstanceHelperMethodFeature.FixtureData fixtureData, TableAssistHelper_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public CreateInstanceFeature(CreateInstanceFeature.FixtureData fixtureData, TableAssistHelper_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace TableAssistHelper.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "InstanceHelperMethod", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "CreateInstance", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -81,7 +81,7 @@ namespace TableAssistHelper.Features
         }
         
         [Xunit.SkippableFactAttribute(DisplayName="Test with table assist helper")]
-        [Xunit.TraitAttribute("FeatureTitle", "InstanceHelperMethod")]
+        [Xunit.TraitAttribute("FeatureTitle", "CreateInstance")]
         [Xunit.TraitAttribute("Description", "Test with table assist helper")]
         public virtual void TestWithTableAssistHelper()
         {
@@ -108,31 +108,23 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Product ID",
-                            "Reserved Qty",
-                            "Basket"});
-                table11.AddRow(new string[] {
-                            "1",
-                            "2",
-                            "0"});
-                table11.AddRow(new string[] {
-                            "2",
-                            "0",
-                            "0"});
-                table11.AddRow(new string[] {
-                            "3",
-                            "2",
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table1.AddRow(new string[] {
+                            "ProductId",
                             "1"});
-                table11.AddRow(new string[] {
-                            "4",
-                            "5",
-                            "1"});
-#line 4
- testRunner.Given("the example below with instance helper", ((string)(null)), table11, "Given ");
+                table1.AddRow(new string[] {
+                            "StockQty",
+                            "2"});
+                table1.AddRow(new string[] {
+                            "Basket",
+                            "0"});
+#line 5
+ testRunner.Given("the example below to create an instance", ((string)(null)), table1, "Given ");
 #line hidden
 #line 10
- testRunner.Then("valid this scenario with table assist helper", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("valid values this scenario", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -145,12 +137,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                InstanceHelperMethodFeature.FeatureSetup();
+                CreateInstanceFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                InstanceHelperMethodFeature.FeatureTearDown();
+                CreateInstanceFeature.FeatureTearDown();
             }
         }
     }

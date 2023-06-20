@@ -19,7 +19,7 @@ namespace TableAssistHelper.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public partial class InstanceHelperMethodFeature : object, Xunit.IClassFixture<InstanceHelperMethodFeature.FixtureData>, System.IDisposable
+    public partial class HelperCompareToInstanceFeature : object, Xunit.IClassFixture<HelperCompareToInstanceFeature.FixtureData>, System.IDisposable
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -28,10 +28,10 @@ namespace TableAssistHelper.Features
         
         private Xunit.Abstractions.ITestOutputHelper _testOutputHelper;
         
-#line 1 "InstanceHelperMethod.feature"
+#line 1 "HelperCompareToInstance.feature"
 #line hidden
         
-        public InstanceHelperMethodFeature(InstanceHelperMethodFeature.FixtureData fixtureData, TableAssistHelper_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
+        public HelperCompareToInstanceFeature(HelperCompareToInstanceFeature.FixtureData fixtureData, TableAssistHelper_XUnitAssemblyFixture assemblyFixture, Xunit.Abstractions.ITestOutputHelper testOutputHelper)
         {
             this._testOutputHelper = testOutputHelper;
             this.TestInitialize();
@@ -40,7 +40,7 @@ namespace TableAssistHelper.Features
         public static void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "InstanceHelperMethod", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Features", "HelperCompareToInstance", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -80,14 +80,14 @@ namespace TableAssistHelper.Features
             this.TestTearDown();
         }
         
-        [Xunit.SkippableFactAttribute(DisplayName="Test with table assist helper")]
-        [Xunit.TraitAttribute("FeatureTitle", "InstanceHelperMethod")]
-        [Xunit.TraitAttribute("Description", "Test with table assist helper")]
-        public virtual void TestWithTableAssistHelper()
+        [Xunit.SkippableFactAttribute(DisplayName="Customer can add product to basket")]
+        [Xunit.TraitAttribute("FeatureTitle", "HelperCompareToInstance")]
+        [Xunit.TraitAttribute("Description", "Customer can add product to basket")]
+        public virtual void CustomerCanAddProductToBasket()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Test with table assist helper", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Customer can add product to basket", null, tagsOfScenario, argumentsOfScenario, this._featureTags);
 #line 3
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -108,31 +108,62 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Product ID",
-                            "Reserved Qty",
-                            "Basket"});
-                table11.AddRow(new string[] {
-                            "1",
-                            "2",
-                            "0"});
-                table11.AddRow(new string[] {
-                            "2",
-                            "0",
-                            "0"});
-                table11.AddRow(new string[] {
-                            "3",
-                            "2",
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Field",
+                            "Value"});
+                table2.AddRow(new string[] {
+                            "ProductId",
                             "1"});
-                table11.AddRow(new string[] {
-                            "4",
-                            "5",
-                            "1"});
+                table2.AddRow(new string[] {
+                            "StockQty",
+                            "2"});
+                table2.AddRow(new string[] {
+                            "Basket",
+                            "0"});
 #line 4
- testRunner.Given("the example below with instance helper", ((string)(null)), table11, "Given ");
+ testRunner.Given("I have the following data", ((string)(null)), table2, "Given ");
 #line hidden
+#line 9
+ testRunner.When("I click the Add to Basket button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "StockQty",
+                            "Basket"});
+                table3.AddRow(new string[] {
+                            "1",
+                            "1"});
 #line 10
- testRunner.Then("valid this scenario with table assist helper", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("usgin the first approach, the quantities are", ((string)(null)), table3, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "StockQty",
+                            "Basket"});
+                table4.AddRow(new string[] {
+                            "1",
+                            "1"});
+#line 13
+ testRunner.Then("usgin the second approach, the quantities are", ((string)(null)), table4, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                            "StockQty",
+                            "Basket"});
+                table5.AddRow(new string[] {
+                            "1",
+                            "1"});
+#line 16
+ testRunner.Then("usgin the thirdy approach, the quantities are", ((string)(null)), table5, "Then ");
+#line hidden
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                            "StockQty",
+                            "Basket"});
+                table6.AddRow(new string[] {
+                            "1",
+                            "1"});
+#line 19
+ testRunner.Then("usgin the FINAL approach, the quantities are", ((string)(null)), table6, "Then ");
+#line hidden
+#line 22
+ testRunner.And("a message \'Added to basket\' is displayed to the customer", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -145,12 +176,12 @@ this.ScenarioInitialize(scenarioInfo);
             
             public FixtureData()
             {
-                InstanceHelperMethodFeature.FeatureSetup();
+                HelperCompareToInstanceFeature.FeatureSetup();
             }
             
             void System.IDisposable.Dispose()
             {
-                InstanceHelperMethodFeature.FeatureTearDown();
+                HelperCompareToInstanceFeature.FeatureTearDown();
             }
         }
     }
