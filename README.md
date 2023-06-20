@@ -3,14 +3,15 @@
 ## Contents <!-- omit in toc -->
 
 - [1. Overview](#1-overview)
-- [2. What is BDD](#2-what-is-bdd)
-- [3. What is Cucumber](#3-what-is-cucumber)
-- [4. What is Gherkin](#4-what-is-gherkin)
-  - [4.1. Why learn Gherkin](#41-why-learn-gherkin)
-  - [4.2. User stories](#42-user-stories)
-    - [4.2.1. Need to know](#421-need-to-know)
-  - [4.3. Example user story](#43-example-user-story)
-    - [4.3.1. Questions and answers](#431-questions-and-answers)
+  - [1.1. What is BDD](#11-what-is-bdd)
+  - [1.2. What is Cucumber](#12-what-is-cucumber)
+  - [1.3. What is Gherkin](#13-what-is-gherkin)
+    - [1.3.1. Why learn Gherkin](#131-why-learn-gherkin)
+    - [1.3.2. User stories](#132-user-stories)
+      - [1.3.2.1. Need to know](#1321-need-to-know)
+    - [1.3.3. Example user story](#133-example-user-story)
+      - [1.3.3.1. Questions and answers](#1331-questions-and-answers)
+    - [2. Keywords](#2-keywords)
 
 # 1. Overview
 
@@ -18,7 +19,7 @@
 - Specflow is very popular as it integrates with Visual Studio and is really easy to use.
 - **Gherkin is used to write business scenarios in a human language, and Specflow will interpret these scenarios and convert them into executable .NET code.**
 
-# 2. What is BDD
+## 1.1. What is BDD
 
 - **BDD is Behaviour Driven Development.**
 - **Eencouraging teams to collaborate together**, across the business regardless of their role.
@@ -27,20 +28,20 @@
 - This enables the team to respond quickly to any feedback from users and do the least amount of work necessary to fulfil the business needs.
 - And it also **produces up-to-date documentation** which is validated automatically along with the system behaviour.
 
-# 3. What is Cucumber
+## 1.2. What is Cucumber
 
 - Cucumber is an open source software tool that supports Behaviour Driven Development.
 - It offers ways to write scenarios and tests so that anyone can understand them, even without technical knowledge.
 - Acceptance tests are written, which describe the behavior of the system being tested from a business perspective before the developers write any code.
 - It's available in many languages and just a few are shown here, but there are many more implementations.
 
-# 4. What is Gherkin
+## 1.3. What is Gherkin
 
 - Cucumber writes acceptance tests and scenarios in an English like language, using certain keywords with a particular syntax.
 - This simple English like text is called the Gherkin language.
 - Because Gherkin is in a certain syntax with known keywords, it can be parsed and understood by the Cucumber software in order to validate these scenarios and test the software against the acceptance criteria.
 
-## 4.1. Why learn Gherkin
+### 1.3.1. Why learn Gherkin
 
 - Essential to learn if using BDD / Cucumber.
 - Widely used by testing professionals.
@@ -48,7 +49,7 @@
 - Look great on resume / CV.
 - Gherkin is a universal language.
 
-## 4.2. User stories
+### 1.3.2. User stories
 
 - If we have a product or software which has a user interface, then we should be able to produce what is known as user stories.
 - So user stories are a description in an informal **way of a user's journey through a feature or functionality**.
@@ -58,7 +59,7 @@
 - The user story also needs to **have some criteria**, which are certain conditions that should be met to perform the action.
 - User stories are used if a development process adopts Agile or Kanban.
 
-### 4.2.1. Need to know
+#### 1.3.2.1. Need to know
 
 - When we are gathering business requirements to make a user story, we need to know a few things.
 - To make a successful user story, what do we need to know?
@@ -70,14 +71,14 @@
   - We also need the **result**.
     - What's happens after the action? Perhaps a webpage is shown, an email is sent or a message is displayed?
 
-## 4.3. Example user story
+### 1.3.3. Example user story
 
 - Customer can buy a product on the website.
 - Customer can click buy button on the website.
 - Customer clicks buy button on product page.
 - Customer clicks buy button on product page and product added to shopping basket.
 
-### 4.3.1. Questions and answers
+#### 1.3.3.1. Questions and answers
 
 |           | User story                                   | Gherkin |
 | --------- | -------------------------------------------- | ------- |
@@ -85,3 +86,17 @@
 | Condition | On product page                              | Given   |
 | Action    | Click buy button                             | When    |
 | Result    | Product added to shopping to shopping basket | Then    |
+
+### 2. Keywords
+
+- `Feature`
+- `Scenario`
+- `Given`
+- `When`
+- `Then`
+- `And`
+- `But`
+- `*`
+- `Main`
+- `Rule`
+- `Background`
